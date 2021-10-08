@@ -4,14 +4,15 @@ public class user_bio {
     private String name;
     private String Passwd;
 
+
 public String getName(){
 
-    return name;
+    return this.name;
 }
 
 public String getPasswd(){
 
-    return Passwd;
+    return this.Passwd;
 }
 public void setName(String name){
     this.name = name;
