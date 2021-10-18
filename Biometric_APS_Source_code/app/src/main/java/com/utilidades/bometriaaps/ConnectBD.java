@@ -1,16 +1,16 @@
 package com.utilidades.bometriaaps;
 
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Build;
+import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
+import java.sql.Connection;
+
+
 
 public class ConnectBD extends SQLiteOpenHelper {
+
     private static final String bdName = "infoaps.db";
     private static final int vs = 1;
     public ConnectBD(Context context) {

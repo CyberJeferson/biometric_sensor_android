@@ -4,9 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import androidx.annotation.Nullable;
 
-import java.sql.Connection;
 
 public class userDAO {
 private String comm;
@@ -14,6 +12,7 @@ private String comm;
  private SQLiteDatabase infos;
 
  public userDAO(Context context){ //Construtor
+
      Conbd = new ConnectBD(context);
      infos =  Conbd.getWritableDatabase();
  }
@@ -22,7 +21,9 @@ private String comm;
      ContentValues val = new ContentValues();
      val.put("name", user.getName());
      val.put("pass", user.getPasswd());
+
   return infos.insert("user",null,val);
+
  }
 
  public void searchUser(user_bio user){ //Procurar usuarios salvos
@@ -30,6 +31,7 @@ private String comm;
     while(c.moveToNext()){
         user.setName(c.getString(0));
         user.setPasswd(c.getString(1));
+        infos.close();
     }
 
 

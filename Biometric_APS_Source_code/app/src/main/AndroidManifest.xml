@@ -3,13 +3,17 @@
     package="com.utilidades.bometriaaps">
 
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label = "Biometria APS"
+        android:label="Biometria APS"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BometriaAPS">
+        <activity android:name=".det_inf"></activity>
+        <activity android:name=".infos" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

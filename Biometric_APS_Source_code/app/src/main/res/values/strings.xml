@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BometriaAPS</string>
+    <string name="title_infosdet_list">Items</string>
+    <string name="title_infosdet_detail">infos_det Detail</string>
 </resources>
