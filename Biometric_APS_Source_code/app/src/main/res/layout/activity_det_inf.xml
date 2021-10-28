@@ -8,20 +8,22 @@
 
     <ScrollView
         android:id="@+id/infread"
-        android:layout_width="728dp"
-        android:layout_height="287dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#277435"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
+            android:id="@+id/det_inlist1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
@@ -29,110 +31,117 @@
                 android:id="@+id/imgProd"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="300dp"
-                android:background="#E60404"
+                android:layout_gravity="center"
                 tools:srcCompat="@android:drawable/btn_star_big_on" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
-                android:text="INFORMAÇÕES DA UNIDADE PRODUTORA LVL 1"
+                android:gravity="center"
+                android:text="INFORMAÇÕES DA AGROINDÚSTRIA."
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
-                android:textColor="@android:color/holo_red_light"
+                android:textColor="?attr/textColorAlertDialogListItem"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/name_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
+                android:gravity="center"
                 android:text="NOME DA UNIDADE PRODUTORA"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/end_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
+                android:gravity="center"
                 android:text="ENDEREÇO DA UNIDADE PRODUTORA"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtproducts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
+                android:gravity="center"
                 android:text="PRODUTOS PRODUZIDOS"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtAnn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
+                android:gravity="center"
                 android:text="PRODUÇÃO ANUAL 1000 T"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtLcation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
+                android:gravity="center"
                 android:text="DESTINO DA PRODUÇÃO"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtnemp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
+                android:gravity="center"
                 android:text="NÚMERO DE EMPREGADOS"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtmachinenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
+                android:gravity="center"
                 android:text="QUANTIDADE DE MÁQUINAS"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtlvlaut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
+                android:gravity="center"
                 android:text="NÍVEL DE AUTOMAÇÃO"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/txtpriveinf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
                 android:fontFamily="monospace"
+                android:gravity="center"
                 android:text="INFORMAÇÕES PRIVADAS LVL2 E 3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display4"
-                android:textColor="@android:color/holo_red_dark"
+                android:textColor="?attr/textColorAlertDialogListItem"
                 android:textSize="18sp" />
 
         </LinearLayout>

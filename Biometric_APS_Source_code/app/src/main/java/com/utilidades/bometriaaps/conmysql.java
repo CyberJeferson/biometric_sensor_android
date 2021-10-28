@@ -12,9 +12,9 @@ public class conmysql {
 
         try {
 
-            conn = DriverManager.getConnection("jdbc:mysql://trabalhosremotos.serveblog.net:3306/aps?" +
-                    "user=Mike&password=");
-            System.out.println( ">>>>sucesso>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+            conn = DriverManager.getConnection("jdbc:mysql://ipbancodedados:3306/aps?" +
+                    "user=usuario&password=senha");
+
             return conn;
 
         } catch (SQLException e) {

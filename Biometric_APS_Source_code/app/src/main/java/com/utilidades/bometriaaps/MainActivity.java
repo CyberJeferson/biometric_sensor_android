@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
   private EditText txtName;
   private TextView txtPassword;
   private long iduser;
-  private Connection conect;
+  protected  Connection conect;
   private Switch savePass;
   private boolean checkuser = false;
     static final String[] teste = {"SELECT * FROM users WHERE"};
@@ -83,28 +83,10 @@ public class MainActivity extends AppCompatActivity {
           @Override
           public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
               super.onAuthenticationSucceeded(result);
-
-
-
-
-
-
-
-              if (savePass.isChecked()){
-
-                  userdao  = new userDAO(MainActivity.this);
-                  userdao.deteAlluser();
-                  user.setName(txtName.getText().toString());
-                  user.setPasswd(txtPassword.getText().toString());
-                  iduser =  userdao.insertUser(user);
-              }else{
-                  userdao  = new userDAO(MainActivity.this);
-                  userdao.deteAlluser();
-              }
-
               class Task1 extends AsyncTask<Void, Void, Void>{
                   @Override
                   protected Void doInBackground(Void... Void) {
+
                       conect = conmysql.connect();
                       try {
 
@@ -131,9 +113,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+                        conect.close();
 
-                          stmt.close();
-                            conect.close();
                       }catch (Exception e){
                           //TxtStatus.setText(e.getMessage());
                       }
@@ -160,7 +141,26 @@ public class MainActivity extends AppCompatActivity {
 
                   }
               }
+
               new Task1().execute();
+
+
+
+
+
+              if (savePass.isChecked()){
+
+                  userdao  = new userDAO(MainActivity.this);
+                  userdao.deteAlluser();
+                  user.setName(txtName.getText().toString());
+                  user.setPasswd(txtPassword.getText().toString());
+                  iduser =  userdao.insertUser(user);
+              }else{
+                  userdao  = new userDAO(MainActivity.this);
+                  userdao.deteAlluser();
+              }
+
+
 
 
           }
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
           @Override
           public void onAuthenticationFailed() {
               super.onAuthenticationFailed();
-              TxtStatus.setText("erros");
+              TxtStatus.setText("VOCÊ NÃO FOI AUTENTICADO");
           }
       });
       pinfo = new BiometricPrompt.PromptInfo.Builder()

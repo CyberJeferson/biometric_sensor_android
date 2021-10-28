@@ -56,7 +56,7 @@ public class infos extends AppCompatActivity {
 
 
             private static Bitmap bm = null;
-            protected static Connection conect;
+             protected  Connection conect;
             ImageView imageInfo;
             private TextView txtName;
             private TextView txtRegister,JobF;
@@ -132,7 +132,7 @@ public class infos extends AppCompatActivity {
                             }
 
 
-                            stmt.close();
+                           conect.close();
 
                         } catch (Exception e) {
 
