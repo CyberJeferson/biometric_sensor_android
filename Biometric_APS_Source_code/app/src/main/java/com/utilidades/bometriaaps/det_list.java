@@ -1,6 +1,6 @@
 package com.utilidades.bometriaaps;
 
-import android.graphics.Bitmap;
+
 
 public class det_list {
 

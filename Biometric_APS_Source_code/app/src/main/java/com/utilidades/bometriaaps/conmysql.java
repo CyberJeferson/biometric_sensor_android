@@ -15,6 +15,9 @@ public class conmysql {
             conn = DriverManager.getConnection("jdbc:mysql://ipbancodedados:3306/aps?" +
                     "user=usuario&password=senha");
 
+
+
+
             return conn;
 
         } catch (SQLException e) {

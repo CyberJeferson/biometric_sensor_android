@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
           @Override
           public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
               super.onAuthenticationSucceeded(result);
+
+              //---------------------------------------------------------------------------inicio do banco de dados mysql verificações
               class Task1 extends AsyncTask<Void, Void, Void>{
                   @Override
                   protected Void doInBackground(Void... Void) {
@@ -159,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                   userdao  = new userDAO(MainActivity.this);
                   userdao.deteAlluser();
               }
-
+//-------------------------------------------------------------------------FIM DAS VERIFICAÇÕES
 
 
 

@@ -685,7 +685,7 @@ public class det_inf extends AppCompatActivity {
                     agro.setRowCount(agrotoxicos.size() + 1);
                     agro.setColumnCount(3);
                     TextView getInfo = new TextView(det_inf.this);
-                    getInfo.setText("!:");
+                    getInfo.setText("");
                     getInfo.setTextColor(Color.RED);
                     getInfo.setHeight(100);
                     getInfo.setWidth(100);
@@ -734,6 +734,7 @@ public class det_inf extends AppCompatActivity {
 
                         }else{
                             biohazard = new ImageView(det_inf.this);
+                            biohazard.setImageResource(R.drawable.checado);
                             biohazard.setLayoutParams(new LinearLayout.LayoutParams(100,100));
                             biohazard.setBackground(gradientDrawable);
                             agro.addView(biohazard);
